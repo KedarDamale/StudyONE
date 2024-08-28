@@ -279,8 +279,12 @@ const LandingPage = () => {
           </span>
         </h2>
         <div className="flex flex-wrap justify-center">
-          <div className="px-4 md:px-6 lg:px-8 p-3 w-full lg:w-auto">
-            <img src={codeImg} alt="Coding" className="max-w-lg mx-auto" />
+           <div className="px-4 md:px-6 lg:px-8 p-3 w-full lg:w-auto">
+            <img
+              src={codeImg}
+              alt="Coding"
+              className="w-full max-w-xs md:max-w-sm lg:max-w-md mx-auto"
+            />
           </div>
           <div className="pt-4 w-full lg:w-1/2">
             {checklistItems.map((item, index) => (
