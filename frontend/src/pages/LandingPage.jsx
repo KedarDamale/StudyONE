@@ -385,7 +385,7 @@ const LandingPage = () => {
 
           {/* Copyright */}
           <div className="text-neutral-300">
-            &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+            &copy; {new Date().getFullYear()} StudyONE. All rights reserved.
           </div>
         </div>
       </footer>
