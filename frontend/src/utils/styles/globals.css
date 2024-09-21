@@ -1,0 +1,22 @@
+/* globals.css */
+.scrollbar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #34d399 #1f2937; /* For Firefox */
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #2678eb; /* Track color */
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #34d399; /* Thumb color */
+  border-radius: 4px; /* Round the corners */
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #2a9d8f; /* Thumb color on hover */
+}
