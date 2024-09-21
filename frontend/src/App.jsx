@@ -14,6 +14,11 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import { Toaster } from "react-hot-toast";
 import { useAuthStore } from "./store/authStore";
 import { useEffect } from "react";
+<<<<<<< HEAD
+=======
+import NotFoundPage from "./pages/NotFoundPage";
+import MaintenancePage from "./pages/underDevMaintainance";
+>>>>>>> 59a58c9 (Added 404 page and maintainance page and some bug fixes)
 
 // protect routes that require authentication
 const ProtectedRoute = ({ children }) => {
@@ -72,9 +77,13 @@ const StyledRoute = ({ children }) => (
 );
 
 const NormalRoute = ({ children }) => (
+<<<<<<< HEAD
   <div
     className="min-h-screen items-center justify-center relative overflow-hidden"
   >
+=======
+  <div className="min-h-screen items-center justify-center relative overflow-hidden">
+>>>>>>> 59a58c9 (Added 404 page and maintainance page and some bug fixes)
     {children}
   </div>
 );
@@ -91,12 +100,16 @@ function App() {
   return (
     <>
       <Routes>
+<<<<<<< HEAD
         <Route
           path="/"
           element={
               <LandingPage />
           }
         />
+=======
+        <Route path="/" element={<LandingPage />} />
+>>>>>>> 59a58c9 (Added 404 page and maintainance page and some bug fixes)
         <Route
           path="/dashboard"
           element={
@@ -144,6 +157,17 @@ function App() {
           }
         />
         <Route
+<<<<<<< HEAD
+=======
+          path="/404"
+          element={
+            <StyledRoute>
+              <NotFoundPage />
+            </StyledRoute>
+          }
+        />
+        <Route
+>>>>>>> 59a58c9 (Added 404 page and maintainance page and some bug fixes)
           path="/reset-password/:token"
           element={
             <StyledRoute>
@@ -153,8 +177,21 @@ function App() {
             </StyledRoute>
           }
         />
+<<<<<<< HEAD
         {/* catch all routes */}
         <Route path="*" element={<Navigate to="/" replace />} />
+=======
+        <Route
+          path="/underDevMaintainance"
+          element={
+            <StyledRoute>
+              <MaintenancePage />
+            </StyledRoute>
+          }
+        />
+        {/* catch all routes */}
+        <Route path="*" element={<Navigate to="/404" replace />} />
+>>>>>>> 59a58c9 (Added 404 page and maintainance page and some bug fixes)
       </Routes>
       <Toaster />
     </>
