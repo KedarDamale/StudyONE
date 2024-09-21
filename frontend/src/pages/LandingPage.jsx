@@ -126,7 +126,9 @@ const LandingPage = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center flex-shrink-0">
               <img className="h-14 mr-2" src={Logo123} alt="Logo" />
-              <span className="text-3xl tracking-tight text-text-colour">StudyONE</span>
+              <span className="text-3xl tracking-tight text-text-colour">
+                StudyONE
+              </span>
             </div>
             <ul className="hidden lg:flex ml-14 space-x-12 text-text-colour">
               {navItems.map((item, index) => (
@@ -279,7 +281,7 @@ const LandingPage = () => {
           </span>
         </h2>
         <div className="flex flex-wrap justify-center">
-           <div className="px-4 md:px-6 lg:px-8 p-3 w-full lg:w-auto">
+          <div className="px-4 md:px-6 lg:px-8 p-3 w-full lg:w-auto">
             <img
               src={codeImg}
               alt="Coding"
@@ -334,7 +336,7 @@ const LandingPage = () => {
       </div>
 
       <footer className="mt-20 border-t py-10 border-neutral-700 max-w-5xl mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Social Media Icons */}
           <div className="flex space-x-4">
             <a
@@ -384,7 +386,7 @@ const LandingPage = () => {
           </div>
 
           {/* Copyright */}
-          <div className="text-neutral-300">
+          <div className="text-neutral-300 text-center md:text-left">
             &copy; {new Date().getFullYear()} StudyONE. All rights reserved.
           </div>
         </div>
