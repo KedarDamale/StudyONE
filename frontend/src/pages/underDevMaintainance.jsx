@@ -30,10 +30,10 @@ const MaintenancePage = () => {
         className="w-full max-w-xs"
       >
         <Link
-          to="/dashboard"
+          to="/"
           className="block py-3 px-6 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-lg shadow-lg hover:from-green-600 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200 text-center"
         >
-          Return to Dashboard
+          Return to Landing Page
         </Link>
       </motion.div>
     </motion.div>
