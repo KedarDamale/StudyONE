@@ -47,7 +47,7 @@ const DashboardPage = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen bg-slate-900">
       {/* Sidebar */}
       <Sidebar
         isOpen={isSidebarOpen}

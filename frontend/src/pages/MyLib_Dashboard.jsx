@@ -1,8 +1,8 @@
 const My_lib=()=>{
 return(
     <>
-    <h1>This is Personal Library</h1>
-    </>
+<h1 class="text-white">This is Personal Library</h1>
+</>
 )
 }
 export default My_lib
