@@ -16,7 +16,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import { Toaster } from "react-hot-toast";
 import { useAuthStore } from "./store/authStore";
 import { useEffect } from "react";
-import Help from "./pages/Help_Dashboard"
+import Help from "./pages/Help_Dashboard";
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, user } = useAuthStore();
@@ -128,7 +128,14 @@ function App() {
             </StyledRoute>
           }
         />
-        <Route path="/404" element={<NotFoundPage />} />
+        <Route
+          path="/404"
+          element={
+            <StyledRoute>
+              <NotFoundPage />
+            </StyledRoute>
+          }
+        />
         <Route
           path="/reset-password/:token"
           element={
@@ -147,7 +154,14 @@ function App() {
             </StyledRoute>
           }
         />
-        <Route path="/underDevMaintainance" element={<MaintenancePage />} />
+        <Route
+          path="/underDevMaintainance"
+          element={
+            <StyledRoute>
+              <MaintenancePage />
+            </StyledRoute>
+          }
+        />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
       <Toaster />
