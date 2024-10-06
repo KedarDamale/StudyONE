@@ -10,6 +10,8 @@ import { connectDB } from "./db/connectDB.js"; // This function will connect the
 
 // Import authentication routes
 import authRoutes from "./routes/auth.route.js"; // These are the routes for user authentication, such as login and registration.
+import chatRoutes from './routes/chat.route.js'; // Import chat routes
+
 
 // Load environment variables from .env file
 dotenv.config(); // dotenv is configured to load environment variables from a .env file into process.env.
@@ -33,6 +35,8 @@ app.use(cookieParser()); // Parses cookies attached to incoming requests and mak
 
 // Route for handling authentication-related requests
 app.use("/api/auth", authRoutes); // Routes that start with "/api/auth" will be handled by the authRoutes.
+app.use("/", chatRoutes); // This registers routes starting with /api/chat
+
 
 // Serve static files in production
 if (process.env.NODE_ENV === "production") {
