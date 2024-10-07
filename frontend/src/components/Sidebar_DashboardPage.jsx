@@ -13,23 +13,16 @@ import { Link } from "react-router-dom";
 
 const SidebarData = [
   { title: "Home", icon: <FaHome />, page: "Home" },
-  { title: "My Library", icon: <IoLibrary />, page: "MyLibrary" },
+  //{ title: "My Library", icon: <IoLibrary />, page: "MyLibrary" },
   { title: "Whiteboard", icon: <ImPencil2 />, page: "Whiteboard" },
   { title: "Lecture 2 Notes", icon: <FaRobot />, page: "LectureToNotes" },
   { title: "Interview Hub", icon: <FaDesktop />, page: "InterviewHub" },
-  { title: "Expense Tracker", icon: <RiMoneyRupeeCircleLine />, page: "ExpenseTracker" },
+  //{ title: "Expense Tracker", icon: <RiMoneyRupeeCircleLine />, page: "ExpenseTracker" },
   { title: "Alarms & Trackers", icon: <MdAccessAlarms />, page: "Alarms" },
 ];
 
 const ExtraMenuData = [
-  {
-    title: (
-      <Link to="/help" style={{ textDecoration: "none", color: "inherit" }}>
-        Help
-      </Link>
-    ),
-    icon: <FaQuestionCircle />,
-  },
+  
   { title: "Sign Out", icon: <FaSignOutAlt />, action: "logout" },
 ];
 

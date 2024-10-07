@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { Loader, Send, Trash2 } from "lucide-react"; // Lucide icons
+import { useAuthStore } from "../store/authStore";
 
 const API_URL =
   import.meta.env.MODE === "development"
@@ -22,11 +23,13 @@ const Input = ({ icon: Icon, ...props }) => {
     </div>
   );
 };
-const InterviewHub=()=>{
-    const [message, setMessage] = useState("");
+
+const InterviewHub = () => {
+  const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [history, setHistory] = useState([]);
   const chatContainerRef = useRef(null);
+  const { user, isAuthenticated } = useAuthStore();
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -78,6 +81,7 @@ const InterviewHub=()=>{
       });
     } catch (error) {
       console.error("Error:", error);
+      // Optionally add user feedback for error handling
     } finally {
       setLoading(false);
     }
@@ -121,7 +125,7 @@ const InterviewHub=()=>{
               >
                 <div className="flex flex-col items-end">
                   <div className="bg-green-600 p-3 rounded-lg text-white max-w-sm">
-                    <strong>You:</strong> {chat.user}
+                    <strong>{isAuthenticated && user ? user.name : "You"}</strong>: {chat.user}
                   </div>
                 </div>
                 {chat.bot && (
@@ -136,7 +140,7 @@ const InterviewHub=()=>{
           )}
         </div>
 
-        <div className="p-4 bg-gray-900 flex items-center flex-wrap"> {/* Added flex-wrap */}
+        <div className="p-4 bg-gray-900 flex items-center flex-wrap">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -171,6 +175,6 @@ const InterviewHub=()=>{
       </motion.div>
     </motion.div>
   );
+};
 
-}
-export default InterviewHub
+export default InterviewHub;

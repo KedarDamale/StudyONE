@@ -11,6 +11,7 @@ import { connectDB } from "./db/connectDB.js"; // This function will connect the
 // Import authentication routes
 import authRoutes from "./routes/auth.route.js"; // These are the routes for user authentication, such as login and registration.
 import chatRoutes from './routes/chat.route.js'; // Import chat routes
+import lecture2NotesRoutes from './routes/lecture2notes.route.js';
 
 
 // Load environment variables from .env file
@@ -36,12 +37,15 @@ app.use(cookieParser()); // Parses cookies attached to incoming requests and mak
 // Route for handling authentication-related requests
 app.use("/api/auth", authRoutes); // Routes that start with "/api/auth" will be handled by the authRoutes.
 app.use("/", chatRoutes); // This registers routes starting with /api/chat
+app.use('/api/lecture2notes', lecture2NotesRoutes);
+
+
+
 
 
 // Serve static files in production
 if (process.env.NODE_ENV === "production") {
-    // If in production mode, serve the static files from the "frontend/dist" directory
-    app.use(express.static(path.join(__dirname, "/frontend/dist")));
+    app.use(express.static(path.join(__dirname, "frontend", "dist")));
 
     // Handle all other routes by serving the main index.html file
     app.get("*", (req, res) => {
@@ -50,7 +54,15 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Start the server and listen on the specified port
-app.listen(PORT, () => {
-    connectDB(); // Connect to the database when the server starts.
-    console.log("Server is running on port: ", PORT); // Log a message to indicate that the server is running.
-});
+const startServer = async () => {
+    try {
+        await connectDB(); // Connect to the database
+        app.listen(PORT, () => {
+            console.log("Server is running on port:", PORT); // Log the server start message
+        });
+    } catch (error) {
+        console.error("Error connecting to the database:", error.message); // Log connection errors
+    }
+};
+
+startServer();
