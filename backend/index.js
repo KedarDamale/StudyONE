@@ -71,7 +71,7 @@ const startServer = async () => {
             // Initial visit
             visitURL(); 
             // Set interval for subsequent visits every 3 minutes (180,000 milliseconds)
-            setInterval(visitURL, 180000); 
+            setInterval(visitURL, 90000); 
         });
     } catch (error) {
         console.error("Error connecting to the database:", error.message); 
