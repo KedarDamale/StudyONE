@@ -9,8 +9,6 @@ import { useAuthStore } from "../store/authStore";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
-
 const SidebarData = [
   { title: "Home", icon: <FaHome />, page: "Home" },
   //{ title: "My Library", icon: <IoLibrary />, page: "MyLibrary" },
@@ -22,7 +20,6 @@ const SidebarData = [
 ];
 
 const ExtraMenuData = [
-  
   { title: "Sign Out", icon: <FaSignOutAlt />, action: "logout" },
 ];
 
@@ -36,8 +33,13 @@ function Sidebar({ isOpen, toggleSidebar, setActivePage }) {
   };
 
   const handlePageChange = (page) => {
-    setActivePage(page);   // Set the active page
-    toggleSidebar();       // Close the sidebar
+    if (page === "Whiteboard") {
+      // Redirect to YouTube
+      window.open("https://studyone-drawingboard.vercel.app/", "_blank"); // Opens in a new tab
+    } else {
+      setActivePage(page);   // Set the active page
+      toggleSidebar();       // Close the sidebar
+    }
   };
 
   return (
