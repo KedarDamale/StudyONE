@@ -13,6 +13,8 @@ import { connectDB } from "./db/connectDB.js";
 import authRoutes from "./routes/auth.route.js"; 
 import chatRoutes from './routes/chat.route.js';
 import lecture2NotesRoutes from './routes/lecture2notes.route.js';
+import alarmRoutes from "./routes/alarms.route.js"; // Import alarmsRoutes
+
 
 // Load environment variables from .env file
 dotenv.config(); 
@@ -37,6 +39,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes); 
 app.use("/", chatRoutes); 
 app.use('/api/lecture2notes', lecture2NotesRoutes);
+app.use('/api/alarms', alarmRoutes); // This sets the base path for your alarms
 
 // Serve static files in production
 if (process.env.NODE_ENV === "production") {

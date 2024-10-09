@@ -1,14 +1,19 @@
-import { useAuthStore } from "../store/authStore";
 import FactofTheDay from "../components/FactofTheDay_DashboardPage";
+import Alarms_DashboardPage from "../components/Alarms_DashboardPage";
 
 const Home = () => {
-  const { user, isAuthenticated } = useAuthStore();
 
   return (
-    <>
-      {/*<h1 class="text-white">{isAuthenticated && user ? `${user.name}'s home` : "My home"}</h1>*/}
-      <FactofTheDay />
-    </>
+    <div className="min-h-screen bg-gray-900 text-white p-5">
+      
+      <div className="mb-8">
+        <FactofTheDay />
+      </div>
+
+      <div className="mt-4">
+        <Alarms_DashboardPage />
+      </div>
+    </div>
   );
 };
 
