@@ -62,7 +62,7 @@
 
 ## Access application on 
 ````bash
-https://studyone.onrender.com
+git clone https://studyone.onrender.com
 ````
 This application is hosted on free instance of render so it may take upto 50sec to load and once it has loaded then you will be able to use it without any delay.
 
