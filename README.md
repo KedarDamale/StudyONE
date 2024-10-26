@@ -2,59 +2,57 @@
 
 ## Overview
 
-**StudyONE** is a robust, all-in-one study companion web application tailored to support students' academic and personal growth. Built to streamline organization, productivity, and collaboration, StudyONE equips students with tools like real-time collaborative boards, Lecture to notes ai, a dedicated interview prep hub, and other advanced features
+**StudyONE** is a robust, all-in-one study companion web application tailored to support students' academic and personal growth. Built to streamline organization, productivity, and collaboration, StudyONE equips students with tools like real-time collaborative boards, AI-powered lecture-to-notes conversion, a dedicated interview prep hub, and other advanced features.
 
 ## Features
 
 1. **Industry-Standard Authentication**
 
    - Comprehensive authentication system including:
-
-     - **Login**: Secure login for returning users.
+     - **Login**: Secure login for returning users.  
        ![Login Example](./Readme.photos/Login.png)
-     - **Sign Up**: Allows new users to register and access the platform.
+     - **Sign Up**: Allows new users to register and access the platform.  
        ![SignUp Example](./Readme.photos/SignUp.png)
-     - **Forgot Password**: A reset feature to securely recover access.
+     - **Forgot Password**: A reset feature to securely recover access.  
        ![Forget Password Example](./Readme.photos/ForgetPassword.png)
-     - **Email Verification**: Ensures email verification to prevent unauthorized access.
+     - **Email Verification**: Ensures email verification to prevent unauthorized access.  
        ![EmailVerification Example](./Readme.photos/VerificationEmail.png)
-
-     - **Welcome and Password Reset Emails**: Automatically sent to users’ email addresses to confirm their registration and assist with password recovery.
-       ![WelcomeEmail Example](./Readme.photos/WelcomeEmail.png)
+     - **Welcome and Password Reset Emails**: Automatically sent to users’ email addresses to confirm registration and assist with password recovery.  
+       ![WelcomeEmail Example](./Readme.photos/WelcomeEmail.png)  
        ![ResetPassEmail Example](./Readme.photos/ResetPassEmail.png)
 
 2. **Bespoke Dashboard**
 
    - Customizable, user-specific dashboard offering seamless navigation.
    - Secure access and personalized experience.
-   - Centralized control for managing all tools, updates, and insights.
+   - Centralized control for managing all tools, updates, and insights.  
      ![Dashboard Example](./Readme.photos/Dashboard.png)
 
 3. **Real-Time Collaborative Digital Board**
 
-   - A space for students to brainstorm and collaborate, enabling live editing, drawing, and idea sharing in real-time.
-     ![RTCDB Example](./Readme.photos/DrawingBoard1.png)
-     ![RTCDB Example](./Readme.photos/DrawingBoard2.png)
+   - A space for students to brainstorm and collaborate, enabling live editing, drawing, and idea sharing in real-time.  
+     ![RTCDB Example](./Readme.photos/DrawingBoard1.png)  
+     ![RTCDB Example](./Readme.photos/DrawingBoard2.png)  
      ![RTCDB Example](./Readme.photos/DrawingBoard3.png)
 
 4. **Lecture to Notes (AI-Powered)**
 
    - AI-driven transcription service to convert lecture audio into organized text notes.
-   - Integrates Rev.ai and Google Cloud Speech-to-Text APIs for accurate and accessible notes.
-     ![Lecture2Notes Example](./Readme.photos/Lecture2Notes.png)
+   - Integrates Rev.ai and Google Cloud Speech-to-Text APIs for accurate and accessible notes.  
+     ![Lecture2Notes Example](./Readme.photos/Lecture2Notes.png)  
      ![Lecture2Notes Example](./Readme.photos/Lecture2Notes2.png)
 
 5. **Interview Hub**
 
    - A dedicated hub for interview preparation.
-   - Provides resources, Q&A, and peer support, helping students excel in job interviews and networking opportunities.
+   - Provides resources, Q&A, and peer support, helping students excel in job interviews and networking opportunities.  
      ![InterviewHub Example](./Readme.photos/InterviewHub.png)
 
 6. **Alarms and Trackers**
-   - Customizable alerts and reminders to keep students on track with deadlines and tasks.
-   - Includes personal goal setting and progress tracking to enhance productivity.
-     ![AlarmsandTrackers Example](./Readme.photos/AlarmsAndTrackers.png)
 
+   - Customizable alerts and reminders to keep students on track with deadlines and tasks.
+   - Includes personal goal setting and progress tracking to enhance productivity.  
+     ![AlarmsandTrackers Example](./Readme.photos/AlarmsAndTrackers.png)
 ## Tech Stack
 
 - **Frontend:** React, Tailwind CSS
