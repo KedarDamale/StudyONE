@@ -62,7 +62,7 @@
 
 ## Access application on 
 ````bash
-git clone https://studyone.onrender.com
+https://studyone.onrender.com
 ````
 This application is hosted on free instance of render so it may take upto 50sec to load and once it has loaded then you will be able to use it without any delay.
 
@@ -70,7 +70,7 @@ This application is hosted on free instance of render so it may take upto 50sec 
 
 1. Clone the repository:
    ````bash
-   https://github.com/KedarDamale/StudyONE.git
+   git clone https://github.com/KedarDamale/StudyONE.git
    ````
 2. Create an .env file and add your own values:
    ````bash
